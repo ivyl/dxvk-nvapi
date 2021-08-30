@@ -471,6 +471,8 @@ TEST_CASE("Sysinfo methods succeed", "[.sysinfo]") {
         }
     }
 
+    // TODO: Add tests for NvAPI_GPU_CudaEnumComputeCapableGpus
+
     SECTION("GetGPUType returns OK") {
         ALLOW_CALL(*vulkan, GetPhysicalDeviceProperties2(_, _, _)) // NOLINT(bugprone-use-after-move)
             .SIDE_EFFECT(
